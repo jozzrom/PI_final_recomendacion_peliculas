@@ -3,20 +3,20 @@ import pandas as pd
 import numpy as np
 import ast 
 
-#df=pd.read_csv('data_movies_credits')
+
 df=pd.read_csv('df_2')
 df_recomendaciones=pd.read_csv('data_recomendaciones_final')
-
+y=pd.read_csv('df_peliculas_idioma')
 # Crea una instancia de FastAPI
 app = FastAPI()
 
 #1
 @app.get("/peliculas_idioma/{idioma}")
 def peliculas_idioma(idioma: str):
-    y= df[['original_language']].value_counts()
-        #la serie la convertimos a dataframe y cambiamos el nombre de las columnas
-    y = y.reset_index()
-    y.columns = ['original_language', 'count']
+    # y= df[['original_language']].value_counts()
+    #     #la serie la convertimos a dataframe y cambiamos el nombre de las columnas
+    # y = y.reset_index()
+    # y.columns = ['original_language', 'count']
 
     if idioma in y['original_language'].values:
         # Filtrar el DataFrame y obtener la cantidad de películas en el idioma especificado

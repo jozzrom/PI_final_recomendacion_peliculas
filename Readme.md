@@ -181,8 +181,7 @@ Se realizan las instalaciones necesarias para poder utilizar FastApi en Python, 
 
 Se importan las librerías necesarias para el correcto funcionamiento de las funciones. 
 
-Los dataframes utilizados para las funciones son: **`data_recomendaciones_final`** para el modelo de recomendación y 
-**`data_movies_credits`** para el resto de las funciones. 
+Los dataframes utilizados para las funciones son: **`data_recomendaciones_final`** para el modelo de recomendación.Se esperaba utulizar el csv  obtenido de la limpieza **`data_movies_credits`** para el resto de las funciones, sin embargo, al tratar de subir los documentos a github esots eran muy pesados por lo que a partir de **`data_movies_credits`** se toman columnas específicas y se crean 2 nuevos dataframes que serán utilizados en las funciones: **`df_2`** y **`df_peliculas_idioma`**
 
 Se crea una instancia de FastAPI  ***app = FastAPI()***
 
